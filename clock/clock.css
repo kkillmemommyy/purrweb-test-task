@@ -5,7 +5,7 @@ body {
   justify-content: center;
   height: 100vh;
   background: #6d7a86;
-  font-family: sans-serif;
+  font-family: monospace sans-serif;
 }
 
 .clock {
@@ -24,13 +24,10 @@ body {
   color: #000;
   left: 50%;
   top: 50%;
-  transform: rotate(calc(30deg * var(--n))) translateY(-130px) rotate(calc(-30deg * var(--n)));
-  transform-origin: center;
+  transform: rotate(calc(30deg * var(--n))) translateY(-130px) rotate(calc(-30deg * var(--n))) translate(-50%, -50%);
   text-align: center;
   width: 24px;
   height: 24px;
-  margin-left: -12px;
-  margin-top: -12px;
 }
 
 .clock__hand {
@@ -39,11 +36,10 @@ body {
   left: 50%;
   transform-origin: bottom center;
   background: #333;
-  transform: rotate(0deg);
 }
 
 .clock__hand-hour {
-  width: 3px;
+  width: 4px;
   height: 80px;
   background: #555555;
 }
@@ -67,6 +63,7 @@ body {
   transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
+  z-index: 10;
   background: #000;
   border-radius: 50%;
 }
@@ -80,4 +77,15 @@ button {
   margin: 0 10px;
   font-size: 16px;
   cursor: pointer;
+  background-color: rgb(17, 158, 158);
+  border: 1px solid black;
 }
+
+button:hover {
+  background-color: rgb(42, 174, 174);
+}
+
+button:active {
+  scale: 0.9;
+}
+
