@@ -1,0 +1,142 @@
+.tickers {
+  padding: 46px 0;
+  font: var(--T1_Bold_128);
+  text-shadow: 1px 1px 0 var(--grayscale-2), -1px -1px 0 var(--grayscale-2), 1px -1px 0 var(--grayscale-2),
+    -1px 1px 0 var(--grayscale-2), 1px 1px 0 var(--grayscale-2);
+  color: var(--grayscale-1);
+  position: relative;
+  margin-bottom: 100px;
+  width: 100vw;
+}
+
+.tickers__image-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.tickers__image {
+  width: 100%;
+  height: auto;
+}
+
+.tickers__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 68px;
+}
+
+.tickers__ticker {
+  display: flex;
+  width: 100%;
+}
+
+.tickers__first-line {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.tickers__ticker-highlight-1 {
+  color: var(--secondary-1);
+}
+
+.tickers__ticker-highlight-2 {
+  color: var(--primary-2);
+}
+
+.tickers__ticker-highlight-3 {
+  color: var(--secondary-2);
+}
+
+.ticker_tick-right1 {
+  white-space: nowrap;
+  animation: tick-right-1 40s linear infinite;
+  animation-delay: -40s;
+}
+
+.ticker_tick-right2 {
+  animation: tick-right-2 40s linear infinite;
+  animation-delay: -20s;
+  white-space: nowrap;
+}
+
+.ticker_tick-left1 {
+  white-space: nowrap;
+  animation: tick-left-1 30s linear infinite;
+  animation-delay: -30s;
+}
+
+.ticker_tick-left2 {
+  animation: tick-left-2 30s linear infinite;
+  animation-delay: -15s;
+  white-space: nowrap;
+}
+
+@keyframes tick-right-1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes tick-right-2 {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes tick-left-1 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes tick-left-2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 768px){
+  .tickers {
+    font-size: calc(48px + (128 - 48) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  .tickers__image {
+    width: clamp(228px, 30vw, 308px);
+  }
+}
+
+@media (max-width: 768px) {
+  .tickers {
+    padding: 101px 0;
+    font: var(--T4_Bold_48);
+    margin-bottom: 40px;
+  }
+
+  .tickers__wrap {
+    gap: 93px;
+  }
+
+  .tickers__image {
+    width: 228px;
+  }
+}

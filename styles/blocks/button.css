@@ -1,0 +1,60 @@
+.btn {
+  position: relative;
+  background-color: var(--primary-1);
+  padding: 14px 28px;
+  border-radius: 16px;
+  font: var(--S4_SemiBold_20);
+  cursor: pointer;
+  border: 2px solid var(--primary-1);
+  transition: all 0.3s linear;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  bottom: -80px;
+  left: -50px;
+  width: 0;
+  height: 0;
+  background-color: var(--grayscale-1);
+  transition: all 0.3s linear;
+  z-index: -10;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn_bg-white:hover {
+  border-color: var(--grayscale-1);
+}
+
+.btn:hover:before {
+  width: 200%;
+  height: 400%;
+}
+
+.btn:disabled {
+  background-color: var(--grayscale-3);
+  border: var(--grayscale-3);
+  color: var(--grayscale-7);
+  pointer-events: none;
+}
+
+.btn:focus-visible {
+  border: 2px solid var(--primary-3);
+  box-shadow: 0 0 0 2px var(--primary-3);
+}
+
+.btn:active {
+  background-color: var(--primary-0);
+  border-color: var(--primary-0);
+  transform: scale(1);
+}
+
+.btn:active:before {
+  width: 0;
+  height: 0;
+}

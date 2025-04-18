@@ -1,0 +1,47 @@
+.profits {
+  padding: 40px 0;
+  background-color: var(--primary-1);
+  margin-bottom: 100px;
+}
+
+.profits__wrap {
+  display: flex;
+  margin: 0 auto;
+  gap: 100px;
+  max-width: fit-content;
+  padding-left: 16px;
+  padding-right: 13px;
+}
+
+.profit__title {
+  margin-bottom: 16px;
+}
+
+.profit__subtitle {
+  font: var(--S2_SemiBold_24);
+}
+
+.profit_line-break {
+  display: block;
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+  .profit__subtitle {
+    font-size: calc(20px + (24 - 20) * ((100vw - 768px) / (1440 - 768)));
+  }
+}
+
+@media (max-width: 768px) {
+  .profits {
+    margin-bottom: 40px;
+  }
+
+  .profits__wrap {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .profit_line-break {
+    display: inline;
+  }
+}

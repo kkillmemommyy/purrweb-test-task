@@ -1,0 +1,130 @@
+/* --------- Modal ----------- */
+.contact-modal {
+  margin: auto;
+  border-radius: 20px;
+  border: none;
+  overflow-y: auto;
+}
+
+/* --------- Button ----------- */
+.contact-modal button {
+  width: fit-content;
+}
+
+.contact-modal__close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.contact-modal__close-btn-img {
+  display: block;
+}
+
+/* --------- Form ----------- */
+.contact-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 417px;
+  padding: 40px;
+}
+
+.contact-modal__form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font: var(--B3_Medium_14);
+  color: #070707;
+}
+
+/* ----------- Success ----------- */
+
+.contact-modal__success {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 36px;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-modal__success-img {
+  width: 297px;
+  height: 232px;
+}
+
+.contact-modal__success-title {
+  font: var(--S2_SemiBold_24);
+  color: var(--primary-2);
+}
+
+.contact-modal__success-text {
+  font: var(--S6_Regular_20);
+  color: var(--grayscale-2);
+  max-width: 295px;
+  text-align: center;
+}
+
+/* --------- Input ----------- */
+.contact-modal__form-input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #f1f1f1;
+  border-radius: 14px;
+  font: var(--B4_Regular_14);
+}
+
+.contact-modal__required {
+  color: var(--additional-2);
+}
+
+.contact-modal__form-input::placeholder {
+  color: #a7a7a7;
+}
+
+.contact-modal__form-input:focus {
+  border: 1px solid #a7a7a7;
+  outline: none;
+}
+
+.contact-modal__form-input_invalid,
+.contact-modal__form-input_invalid:focus {
+  border: 1px solid var(--additional-2);
+}
+
+/* --------- Text ----------- */
+.contact-modal__agree-text {
+  font: var(--B5_Light_14);
+  color: var(--grayscale-0);
+}
+
+.contact-modal__link {
+  color: var(--primary-2);
+  text-decoration: underline;
+}
+
+.contact-modal__error-message {
+  font: var(--B7_Regular_12);
+  color: var(--additional-2);
+}
+
+@media (max-width: 768px) {
+  .contact-modal {
+    margin-top: 10px;
+  }
+
+  .contact-modal__form {
+    padding: 20px 16px;
+  }
+
+  .contact-modal__success-img {
+    width: 229px;
+    height: 179px;
+  }
+
+  .contact-modal__success {
+    padding: 40px 20px;
+  }
+}

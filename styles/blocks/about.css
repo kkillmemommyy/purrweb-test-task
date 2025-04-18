@@ -1,0 +1,147 @@
+.about {
+  position: relative;
+  padding-left: 60px;
+  padding-right: 125px;
+  margin-bottom: 100px;
+}
+
+.about__title {
+  margin-bottom: 80px;
+}
+
+.about__content {
+  display: flex;
+  gap: 118px;
+}
+
+.about__description {
+  font: var(--S1_SemiBold_36);
+  max-width: 410px;
+  text-wrap: balance;
+}
+
+.about__highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.about__highlight::before {
+  content: 'network of shoppers';
+  position: absolute;
+  color: rgba(0, 0, 0, 0);
+  background: var(--primary-2);
+  z-index: -10;
+  width: 105%;
+  height: 70%;
+  border-radius: 30px;
+  left: -2.5%;
+  top: 23%;
+  transform: rotate(-1.69deg);
+}
+
+.about__image-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.about__image {
+  width: 100%;
+  height: auto;
+}
+
+.about__features {
+  display: grid;
+  grid-template-columns: minmax(180px, 321px) minmax(180px, 336px);
+  grid-template-rows: auto auto;
+  gap: 70px;
+  margin-bottom: 36px;
+}
+
+.about__feature-icon-wrap {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.about__feature-description {
+  font: var(--S3_Regular_24);
+  margin-top: 20px;
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+  .about {
+    padding-right: 20px;
+  }
+
+  .about__features {
+    gap: calc(40px + (70 - 40) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  .about__content {
+    gap: calc(40px + (118 - 40) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  .about__description {
+    font-size: calc(24px + (36 - 24) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  .about__feature-description {
+    font-size: calc(16px + (24 - 16) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  .about__image-wrap {
+    width: clamp(1px, 36vw, 423px);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .about__title {
+    margin-bottom: 30px;
+  }
+
+  .about__content {
+    gap: 40px;
+  }
+
+  .about__description {
+    font: var(--S2_SemiBold_24);
+  }
+
+  .about__highlight::before {
+    top: 4px;
+    width: 240.4px;
+    height: 20.4px;
+  }
+
+  .about__features {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 60px;
+  }
+
+  .about__feature-description {
+    font: var(--B2_Regular_16);
+    margin-top: 16px;
+  }
+
+  .about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about__image-wrap {
+    display: none;
+  }
+}

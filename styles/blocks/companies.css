@@ -1,0 +1,60 @@
+.companies {
+  display: flex;
+  gap: 30px 90px;
+  flex-wrap: wrap;
+  padding: 0 51px 100px 51px;
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+  .companies__icon-woo-commerce {
+    width: calc(91px + (126 - 91) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  .companies__icon-shopify {
+    width: calc(149px + (209 - 149) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  .companies__icon-square {
+    width: calc(131px + (182 - 131) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  .companies__icon-squarespace {
+    width: calc(196px + (277 - 196) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  .companies__icon-clover {
+    width: calc(128px + (184 - 128) * ((100vw - 768px) / (1440 - 768)));
+  }
+}
+
+@media (max-width: 768px) {
+  .companies {
+    padding: 50px 10px 90px 20px;
+    gap: 30px 40px;
+  }
+
+  .companies__icon-woo-commerce {
+    width: 91px;
+    order: 3;
+  }
+
+  .companies__icon-shopify {
+    width: 149px;
+    order: 2;
+  }
+
+  .companies__icon-square {
+    width: 131px;
+    order: 1;
+  }
+
+  .companies__icon-squarespace {
+    width: 196px;
+    order: 4;
+  }
+
+  .companies__icon-clover {
+    width: 128px;
+    order: 5;
+  }
+}

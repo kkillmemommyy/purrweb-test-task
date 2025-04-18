@@ -1,0 +1,41 @@
+.business-grow {
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.business-grow__wrpa {
+  border: 1px solid var(--grayscale-4);
+  border-radius: 60px;
+  max-width: 1320px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.business-grow__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.business-grow__title {
+  text-align: center;
+}
+
+.business-grow__content button {
+  width: fit-content;
+  color: var(--grayscale-7);
+}
+
+@media (max-width: 768px) {
+  .business-grow {
+    padding: 40px 16px;
+  }
+
+  .business-grow__wrpa {
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="./clock.css" />
+    <script src="./clock.js" defer></script>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="clock__number" style="--n: 1">1</div>
+      <div class="clock__number" style="--n: 2">2</div>
+      <div class="clock__number" style="--n: 3">3</div>
+      <div class="clock__number" style="--n: 4">4</div>
+      <div class="clock__number" style="--n: 5">5</div>
+      <div class="clock__number" style="--n: 6">6</div>
+      <div class="clock__number" style="--n: 7">7</div>
+      <div class="clock__number" style="--n: 8">8</div>
+      <div class="clock__number" style="--n: 9">9</div>
+      <div class="clock__number" style="--n: 10">10</div>
+      <div class="clock__number" style="--n: 11">11</div>
+      <div class="clock__number" style="--n: 12">12</div>
+
+      <div class="clock__center-dot"></div>
+      <div class="clock__hand clock__hand-hour" id="hour"></div>
+      <div class="clock__hand clock__hand-minute" id="minute"></div>
+      <div class="clock__hand clock__hand-second" id="second"></div>
+    </div>
+
+    <div class="clock__control">
+      <button id="start">Старт</button>
+      <button id="pause">Пауза</button>
+    </div>
+  </body>
+</html>

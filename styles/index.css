@@ -1,0 +1,79 @@
+@import './variables.css';
+@import './reset.css';
+@import './fonts.css';
+@import './blocks/index.css';
+
+body,
+html {
+  font-family: 'Outfit';
+  color: var(--grayscale-7);
+  background-color: var(--grayscale-1);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: var(--desktop-container-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-white {
+  background-color: var(--grayscale-6);
+  color: var(--grayscale-0);
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  font: var(--T2_Bold_96);
+}
+
+h3 {
+  font: var(--T3_Bold_64);
+}
+
+h4 {
+  font: var(--T4_Bold_48);
+}
+
+h5 {
+  font: var(--T5_SemiBold_48);
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+  h2 {
+    font-size: calc(40px + (96 - 40) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  h3 {
+    font-size: calc(40px + (64 - 40) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  h4 {
+    font-size: calc(32px + (48 - 32) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  h5 {
+    font-size: calc(32px + (48 - 32) * ((100vw - 768px) / (1440 - 768)));
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font: var(--T6_Bold_40);
+  }
+
+  h3 {
+    font: var(--T6_Bold_40);
+  }
+
+  h4 {
+    font: var(--T7_Bold_32);
+  }
+
+  h5 {
+    font: var(--T7_Bold_32);
+  }
+}
