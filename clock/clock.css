@@ -41,18 +41,21 @@ body {
 
 .clock__hand-hour {
   width: 4px;
+  margin-left: -2px;
   height: 80px;
   background: #555555;
 }
 
 .clock__hand-minute {
   width: 3px;
+  margin-left: -1.5px;
   height: 110px;
   background: #555555;
 }
 
 .clock__hand-second {
   width: 2px;
+  margin-left: -1px;
   height: 140px;
   background: rgb(255, 124, 124);
 }
