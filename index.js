@@ -4,7 +4,6 @@ const openModalBtns = document.querySelectorAll('[data-modal-target="contact"]')
 const modal = document.getElementById('contact-modal');
 
 const closeModalBtn = modal.querySelector('.contact-modal__close-btn');
-const submitModalBtn = modal.querySelector('form button[type="submit"]');
 const successBtn = modal.querySelector('button[type="button"]');
 
 const form = modal.querySelector('form');
