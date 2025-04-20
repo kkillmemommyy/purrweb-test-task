@@ -23,6 +23,7 @@
 .about__highlight {
   position: relative;
   display: inline-block;
+  z-index: 10;
 }
 
 .about__highlight::before {

@@ -19,6 +19,7 @@
 .why-budss__subtitle-highlight {
   position: relative;
   display: inline-block;
+  z-index: 10;
 }
 
 .why-budss__subtitle-highlight::before {
