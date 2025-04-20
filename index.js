@@ -9,11 +9,8 @@ const successBtn = modal.querySelector('button[type="button"]');
 
 const form = modal.querySelector('form');
 const successSection = modal.querySelector('.contact-modal__success');
-const nameInput = form.querySelector('input[name="name"]');
-const emailInput = form.querySelector('input[name="email"]');
-const phoneNumberInput = form.querySelector('input[name="phoneNumber"]');
 
-const requiredFields = [nameInput, emailInput, phoneNumberInput];
+const requiredFields = [form.elements.name, form.elements.email, form.elements.phoneNumber];
 
 // Handlers
 const openModal = () => {
@@ -36,15 +33,15 @@ const submitForm = (e) => {
   e.preventDefault();
   let isFormValid = true;
 
-  requiredFields.forEach((input) => {
-    const errorMessage = input.nextElementSibling;
-    if (input.value.trim() === '') {
+  requiredFields.forEach((field) => {
+    const errorMessage = field.nextElementSibling;
+    if (field.value.trim() === '') {
       isFormValid = false;
       errorMessage.hidden = false;
-      input.classList.add('contact-modal__form-input_invalid');
+      field.classList.add('contact-modal__form-input_invalid');
     } else {
       errorMessage.hidden = true;
-      input.classList.remove('contact-modal__form-input_invalid');
+      field.classList.remove('contact-modal__form-input_invalid');
     }
   });
 
