@@ -21,9 +21,7 @@ const closeModal = () => {
 };
 
 const closeOnOverlayClick = ({ currentTarget, target }) => {
-  const dialogElement = currentTarget;
-  const isClickedOnBackDrop = target === dialogElement;
-  if (isClickedOnBackDrop) {
+  if (target === currentTarget) {
     closeModal();
   }
 };
